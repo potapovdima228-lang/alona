@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alona</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #ff69b4;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    #main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+    }
+
+    #headline {
+      color: white;
+      font-size: clamp(3rem, 15vw, 9rem);
+      font-weight: 900;
+      text-align: center;
+      line-height: 1.1;
+    }
+
+    #btn {
+      background-color: white;
+      color: #ff69b4;
+      border: none;
+      border-radius: 20px;
+      padding: 30px 80px;
+      font-size: clamp(2rem, 8vw, 5rem);
+      font-weight: 900;
+      cursor: pointer;
+      transition: transform 0.1s;
+    }
+
+    #btn:active {
+      transform: scale(0.95);
+    }
+
+    #love {
+      display: none;
+      color: white;
+      font-size: clamp(3rem, 13vw, 8rem);
+      font-weight: 900;
+      text-align: center;
+      line-height: 1.2;
+    }
+  </style>
+</head>
+<body>
+  <div id="main">
+    <p id="headline">Press the button</p>
+    <button id="btn" onclick="showLove()">Button</button>
+  </div>
+
+  <p id="love">I love you ❤️</p>
+
+  <script>
+    function showLove() {
+      document.getElementById('main').style.display = 'none';
+      document.getElementById('love').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
